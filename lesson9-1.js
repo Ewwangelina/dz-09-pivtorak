@@ -1,22 +1,12 @@
-const inputKats2 = prompt('Enter two katets')
+const inputUser = prompt("Введите 2 катета через пробел")
 
-let gipoTen2 = 0;
-
-if(inputKats2 !== null){
-    if(inputKats2.trim() !== ""){
-        const kats = inputKats2.split(" ")
-        console.log(kats[0], kats[1])
-        console.log (isNaN (kats[0]))
-        console.log (isNaN (kats[1]))
-        if (isNaN (kats[0]) || isNaN (kats[1])) {
-            alert(`Число не валідне ${kats[0], kats[1]}`)
-        }else {
-          gipoTen2 = (kats[0] * kats[0]) + (kats[1] * kats[1])
-            alert(`Ваш результат ${gipoTen2}`)
-        }
+if(inputUser?.trim() !== '' && inputUser !== null) {
+    const arrCatet = inputUser.split(" ")
+    if (Number(arrCatet[0]) > 0 && Number(arrCatet[1]) > 0 && arrCatet.length === 2) {
+        const firstCatet = arrCatet[0];
+        const secondCatet = arrCatet[1]
+        alert(`гіпотенуза = ${Math.sqrt((firstCatet**2)+ (secondCatet**2))}`)
     }else {
-        alert(`Строка пуста`)
-    }
+        alert("треба ввести два числа більше 0")}
 }else {
-    alert(`Ви скасували завдання`)
-}
+    alert('Нажаль вы нічого не ввели')}
