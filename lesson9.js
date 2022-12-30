@@ -1,7 +1,7 @@
 const inputKats = prompt('Введить 2 катета через пробіл')
 
 if(inputKats !== null) {
-    const kats = inputKats.split('')
+    const kats = inputKats.split(" ")
     if ( Number(kats[0]) > 0 && Number((kats[1]) > 0  && kats.length === 2)) {
         const firstKat = kats[0];
         const secondKat = kats[1]
